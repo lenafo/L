@@ -1,21 +1,20 @@
-/* Custom Properties */
-:root{
-  --main-color: rgba(255,153,0,1);
-  --second-color: rgba(0,255,255,1);
-  --white-color: rgba(255,255,255,1);
-}
+/* Custom Properties 
+		main-color: rgba(255,153,0,1)
+		second-color: rgba(0,255,255,1)
+		white-color: rgba(255,255,255,1)
+*/
 body{
-	background: var(--main-color);
+	background: rgba(255,153,0,1);
 	font-family: 'Raleway', sans-serif;
 }
 header{
-	background: var(--white-color);
+	background: rgba(255,255,255,1);
 	padding-top: 2em; 
 }
 h1{
-	color: var(--main-color);
+	color: rgba(255,153,0,1);
 }
 h2{
-	color: var(--white-color);
+	color: rgba(255,255,255,1);
 	padding-top: 1em; 
 }
