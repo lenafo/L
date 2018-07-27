@@ -4,7 +4,7 @@
 		white-color: rgba(255,255,255,1)
 */
 body{
-	background: rgba(255,153,0,1);
+	/*background: rgba(255,153,0,1);*/
 	font-family: 'Raleway', sans-serif;
 }
 header{
@@ -15,6 +15,8 @@ h1{
 	color: rgba(255,153,0,1);
 }
 h2{
+	background: linear-gradient(to top, rgba(255,153,0,1),rgba(255,153,0,.5), rgba(255,255,255,1));
 	color: rgba(255,255,255,1);
-	padding-top: 1em; 
+	padding: 3em 0; 
+	text-shadow: 2px 2px rgba(255,153,0,1);
 }
