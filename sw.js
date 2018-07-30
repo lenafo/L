@@ -5,8 +5,9 @@ urlsToCache =[
 	'./',
 	'https://fonts.googleapis.com/css?family=Raleway:400,700',
 	'./style.css',
-    './script.js',
-    'img/L.jpg'
+    './pwa.js',
+    './time.js',
+    './img/L.jpg'
 ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
