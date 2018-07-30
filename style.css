@@ -5,6 +5,7 @@
 */
 body{
   font-family: 'Raleway', sans-serif;
+  padding-top: 1em;
 }
 header{
   background: rgba(255,255,255,1);
@@ -15,7 +16,7 @@ h1{
 h2{
   color: rgba(255,153,0,1);
 }
-#time{
+.time{
   background:  rgba(255,153,0,1);
   color: rgba(255,255,255,1);
   padding: 2em;
