@@ -8,12 +8,7 @@ function printTime(){
 	var secs = d.getSeconds();
 	var milisecs = d.getMilliseconds();
 	document.getElementById("time").innerHTML = 
-	"year "+year+
-	" month "+month+
-	" date "+date+
-	" hours "+hours+
-	" mins "+mins+
-	" secs "+secs+
-	" milisecs "+milisecs;
+	date+" / "+month+" / "+year+"<br>"+hours+" : "+mins+" : "+secs
+	;
 }
 setInterval(printTime, 1000);
