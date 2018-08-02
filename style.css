@@ -13,6 +13,10 @@ h1{
 .brd{
   border: solid thin #fff;
 }
+.map{
+  min-height: 600px;
+  width: 100%;
+}
 .time{
   background: rgba(255,153,0,1);
   color: rgba(255, 255, 255, 1);

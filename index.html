@@ -18,6 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
+
+  <script src="http://maps.googleapis.com/maps/api/js?v3"></script>
 </head>
 <body class="container-fluid text-center">
   <header>  
@@ -34,11 +36,13 @@
     <img class="col-8 col-sm-6 col-md-6 col-lg-4 col-xl-4" src="img/icon_384.png" alt="L" title="L">
   </header>
 
+<section>
   <h2 class="col-12">Descubre donde estas</h2>
-  <input name="get_location" type="submit" class="btn" id="get_location" value="Localización">
-
-  <iframe id="google_map" src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4042248.3456219495!2d-87.0533435482772!3d8.351567512848574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f92e56221acc925%3A0x6254f72535819a2b!2sCosta+Rica!5e0!3m2!1ses-419!2scr!4v1533241889667' width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+  <p id="demo">Click the button to get your position.</p>
+  <button onclick="getLocation()">Try It</button>
+  <div id="mapholder"></div>
+</section>
+  
   <script src="./pwa.js"></script>
   <script src="./time.js"></script>
   <script src="./location.js"></script>

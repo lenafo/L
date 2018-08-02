@@ -1,14 +1,64 @@
-var c = function(position) {
-    
-    var lat = position.coords.latitude,
-        long = position.coords.longitude,
-        coords = lat +', '+ long;
+var x = document.getElementById("demo");
 
-    document.getElementById('google_map').setAttribute('src', 'https://www.google.com/maps/embed?q='+ coords +'&z=60&pb=!1m18!1m12!1m3!1d4042248.3456219495!2d-87.0533435482772!3d8.351567512848574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f92e56221acc925%3A0x6254f72535819a2b!2sCosta+Rica!5e0!3m2!1ses-419!2scr!4v1533241889667');
-
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
 }
 
-document.getElementById('get_location').onclick = function(){
-    navigator.geolocation.getCurrentPosition(c)
-    return false;
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+
+    document.getElementById("mapholder").innerHTML = "<p>"+latlon+"</p><img src='"+img_url+"'>";
 }
+//To use this code on your website, get a free API key from Google.
+//Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+
+
+
+
+
+
+
+//NAMESPACE --> google.maps.ALGO
+// var divMapa = document.getElementById('mapa');
+// navigator.geolocation.getCurrentPosition(fn_ok,fn_mal);
+// function fn_mal() {
+// }
+// function fn_ok(rta) {
+//     var lat = rta.coords.latitude;
+//     var lon = rta.coords.longitude;
+//     var gLatLon new google.maps.LatLng(lat,lon);
+//     var objConfig = {
+//         zoom: 17,
+//         center: gLatLon
+//     }
+//     var gMapa = new google.maps.Map(divMapa, objConfig);
+//     var objConfigMarker = {
+//         position:gLatLon,
+//         map:gMapa,
+//         title:"You are here"
+//     }
+//     var gMarker = new google.maps.Marker(objConfigMarker);
+// }
