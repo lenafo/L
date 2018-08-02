@@ -3,11 +3,12 @@
 const CACHE_NAME = 'v1_cache_L',
 urlsToCache =[
 	'./',
-	'https://fonts.googleapis.com/css?family=Raleway:400,700',
-	'./style.css',
-    './pwa.js',
-    './time.js',
-    './img/L.jpg'
+  './img/L.jpg',
+  'https://fonts.googleapis.com/css?family=Raleway:400,700',
+  './style.css',
+  './pwa.js',
+  './time.js',
+  './location.js'
 ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
