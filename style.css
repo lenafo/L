@@ -5,29 +5,15 @@
 */
 body{
   font-family: 'Raleway', sans-serif;
-  padding-top: 1em;
-}
-header{
-  background: rgba(255,255,255,1);
+  font-size: 18px;
 }
 h1{
   color: rgba(255,153,0,1);
 }
-h2{
-  color: rgba(255,153,0,1);
+.brd{
+  border: solid thin #fff;
 }
 .time{
-  background:  rgba(255,153,0,1);
-  color: rgba(255,255,255,1);
-  padding: 2em;
-}
-.btn_custom{
-	background: rgba(100,180,50,1);
-  color: rgba(255,255,255,1);
-  font-size: 170%;
-}
-.btn_custom:hover{
-  background: rgba(255,255,255,1);
-  border: solid 2px rgba(100,180,50,1);
-  color: rgba(100,180,50,1);
+  background: rgba(255,153,0,1);
+  color: rgba(255, 255, 255, 1);
 }
